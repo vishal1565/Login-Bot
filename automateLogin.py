@@ -22,7 +22,14 @@ if len(sys.argv)==2:
         driver.find_element_by_name('password').send_keys(psd)
         driver.find_element_by_id('passwordNext').click()
         driver.maximize_window()
-    
+    elif sys.argv[1]=='-fb':
+        print("Logging you to your facebook id..\n")
+        driver = webdriver.Chrome()
+        driver.get("https://facebook.com")
+        driver.find_element_by_id('email').send_keys(email)
+        driver.find_element_by_id('pass').send_keys(psd)
+        driver.find_element_by_id('loginbutton').click()
+        driver.maximize_window()
     else:
         print("Unsupported website")
 else:
