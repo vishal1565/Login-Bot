@@ -11,7 +11,7 @@ def printUse():
 if len(sys.argv)==2:
     email = input("Enter Email: ")
     psd = input("Enter Password: ")
-    
+
     if sys.argv[1]=='-gmail':
         print("Now logging you in your gmail account..\n")
         driver = webdriver.Chrome()
