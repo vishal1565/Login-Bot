@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from time import sleep
 import sys
+from getpass import getpass
 
 def printUse():
     print("Usage: python automateLogin.py -[fb/gmail]")
@@ -10,7 +11,7 @@ def printUse():
 
 if len(sys.argv)==2:
     email = input("Enter Email: ")
-    psd = input("Enter Password: ")
+    psd = getpass("Enter Password: ")
 
     if sys.argv[1]=='-gmail':
         try:
